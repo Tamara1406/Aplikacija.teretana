@@ -1,0 +1,23 @@
+﻿@model List<PretraziGrupuViewModel>
+<table style=" text-align: center;">
+    <thead>
+        <tr>
+            <th>Naziv grupe</th>
+            <th>Trener</th>
+            <th>Lokacija</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.GrupaIme</td>
+                <td>@item.Trener</td>
+                <td>@item.Mesto</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

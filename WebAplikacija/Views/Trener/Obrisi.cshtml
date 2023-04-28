@@ -1,0 +1,35 @@
+﻿@model ObrisiTreneraViewModel
+<div asp-validation-summary="All"></div>
+
+<form asp-action="Obrisi" asp-controller="Trener" method="post">
+
+    <div class="div1">
+        <label>Ime:</label>
+        <br />
+        <label>Prezime:</label>
+        <br />
+        <label>Obrazovanje:</label>
+        <br />
+        <label>Opis:</label>
+        <br />
+        <label>Link slike:</label>
+    </div>
+    <div class="div2">
+        <input type="number" asp-for="TrenerID" hidden />
+        <br />
+        <input type="text" asp-for="Ime" readonly/>
+        <br />
+        <input type="text" asp-for="Prezime" readonly/>
+        <br />
+        <input type="text" asp-for="Obrazovanje" readonly />
+        <br />
+        <input type="text" asp-for="Opis" readonly />
+        <br />
+        <input type="Text" asp-for="Slika" readonly />
+        <br />
+    </div>
+
+
+    <input type="submit" value="Obriši" />
+
+</form>

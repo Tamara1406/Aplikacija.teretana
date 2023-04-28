@@ -1,0 +1,41 @@
+﻿@model ObrisiKlijentaViewModel
+<div asp-validation-summary="All"></div>
+
+<form asp-action="Obrisi" asp-controller="Klijent" method="post">
+
+    <div class="div1">
+        <label>Ime:</label>
+        <br />
+        <label>Prezime:</label>
+        <br />
+        <label>Pol:</label>
+        <br />
+        <label>Kilaža:</label>
+        <br />
+        <label>Visina:</label>
+        <br />
+        <label>Grupa:</label>
+    </div>
+    <div class="div2">
+        <input type="number" asp-for="KlijentID" hidden />
+        <br />
+        <input type="text" asp-for="Ime" readonly />
+        <br />
+        <input type="text" asp-for="Prezime" readonly />
+        <br />
+        <input type="text" asp-for="Pol" readonly />
+        <br />
+        <input type="number" asp-for="Kilaza" readonly />
+        <br />
+        <input type="number" asp-for="Visina" readonly />
+        <br />
+        <input type="text" asp-for="Grupa" readonly />
+        <br />
+    </div>
+    
+    <br />
+
+    <input type="submit" value="Obriši" />
+
+
+</form>

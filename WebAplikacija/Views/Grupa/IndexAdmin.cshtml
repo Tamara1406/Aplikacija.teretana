@@ -1,0 +1,28 @@
+﻿@model List<GrupaViewModel>
+
+<button> <a class="nav-link text-dark" asp-area="" asp-route-values="" asp-controller="Grupa" asp-action="Kreiraj">Kreiraj novu grupu</a> </button>
+
+<table style=" text-align: center;">
+    <thead>
+        <tr>
+            <th>Naziv grupe</th>
+            <th>Trener</th>
+            <th>Lokacija</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.GrupaIme</td>
+                <td>@item.Trener</td>
+                <td>@item.Mesto</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-route-id="@item.GrupaID" asp-controller="Grupa" asp-action="Obrisi">Obriši</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

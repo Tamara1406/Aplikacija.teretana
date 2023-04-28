@@ -1,0 +1,19 @@
+﻿@model List<MestoViewModel>
+<table style=" text-align: center;">
+    <thead>
+        <tr>
+            <th>Gradovi u kojima nas možete naći</th>
+            <th>Grupe</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Naziv</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-route-naziv="@item.Naziv" asp-controller="Grupa" asp-action="Pretrazi">Pretraži</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>

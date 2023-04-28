@@ -1,0 +1,104 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url("https://img.freepik.com/free-photo/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.jpg");
+    background-size: 100%, 100%;
+    background-attachment: fixed;
+}
+
+table {
+    width: 50%;
+    margin-top: 100px;
+}
+
+tr {
+    background-color: aliceblue;
+}
+
+th {
+    background-color:cornflowerblue;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: forestgreen;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.naslovna {
+    margin-right: 450px;
+}
+
+input {
+    margin-top: 20px;
+}
+
+select {
+    margin-top: 20px;
+}
+
+label {
+    margin-top: 25px;
+}
+
+.div1 {
+    display: inline-block;
+}
+
+.div2 {
+    display: inline-block;
+}
+

@@ -1,0 +1,32 @@
+﻿@model List<PretraziKlijentaViewModel>
+
+@using (Html.BeginForm("Pretrazi", "Klijent", FormMethod.Post))
+{
+    @Html.TextBox("imePrezime")
+    <br />
+    <input type="submit" value="Pretraži" />
+}
+
+
+<table style=" text-align: center;">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Grupa</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Ime</td>
+                <td>@item.Prezime</td>
+                <td>@item.Grupa</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-route-id="@item.KlijentID" asp-controller="Klijent" asp-action="Detalji">Detalji</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

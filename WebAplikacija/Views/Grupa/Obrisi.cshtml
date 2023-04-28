@@ -1,0 +1,29 @@
+﻿@model ObrisiGrupuViewModel
+<div asp-validation-summary="All"></div>
+
+<form asp-action="Obrisi" asp-controller="Grupa" method="post">
+
+    <div class="div1">
+        <label>Naziv grupe:</label>
+        <br />
+        <label>Trener:</label>
+        <br />
+        <label>Mesto:</label>
+    </div>
+    <div class="div2">
+        <input type="number" asp-for="GrupaID" hidden />
+        <br />
+        <input type="text" asp-for="GrupaIme" readonly />
+        <br />
+        <input type="text" asp-for="Trener" readonly />
+        <br />
+        <input type="text" asp-for="Mesto" readonly />
+        <br />
+    </div>
+
+    <br />
+
+    <input type="submit" value="Obriši" />
+
+
+</form>

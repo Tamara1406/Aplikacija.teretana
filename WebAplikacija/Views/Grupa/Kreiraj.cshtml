@@ -1,0 +1,30 @@
+﻿@model KreirajGrupuViewModel
+<div asp-validation-summary="All"></div>
+
+
+
+<form asp-action="Kreiraj" asp-controller="Grupa" method="post">
+
+    <div class="div1">
+        <label>Naziv grupe:</label>
+        <br />
+        <label>Trener:</label>
+        <br />
+        <label>Mesto:</label>
+    </div>
+    <div class="div2">
+        <input type="text" asp-for="GrupaIme" />
+        <span asp-validation-for="GrupaIme"></span>
+        <br />
+        <select asp-items="Model.Treneri" asp-for="TrenerID">
+        </select>
+        <br />
+        <select asp-items="Model.Mesta" asp-for="MestoID">
+        </select>
+        <br />
+    </div>
+
+
+    <input type="submit" value="Sacuvaj" />
+
+</form>

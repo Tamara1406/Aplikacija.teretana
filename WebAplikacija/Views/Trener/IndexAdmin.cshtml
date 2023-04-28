@@ -1,0 +1,35 @@
+﻿@model List<TrenerViewModel>
+
+<button> <a class="nav-link text-dark" asp-area="" asp-controller="Trener" asp-action="Kreiraj">Kreiraj novog trenera</a> </button>
+
+
+@foreach (var item in Model)
+{
+    <div style="background-color: lightslategray; border-radius:5px; width:600px; height:400px; border-bottom-style:solid; border-top-style:solid; border-bottom-color: white; border-top-color: white; margin-top: 20px;">
+        <div class="div1">
+            <img src="@item.Slika" alt="trener" style="width: 250px; margin-left: 20px;  margin-bottom: 250px; " />
+        </div>
+        <div class="div2">
+
+            <h3 style="margin-top: 80px; ">@item.ImePrezime</h3>
+            <p style="margin-top: 5px;">Obrazovanje: @item.Obrazovanje</p>
+            <p style="margin-top: 5px; width:300px ">@item.Opis</p>
+
+            <button style=" margin-top: 5px;">
+                <a class="nav-link text-dark" asp-area="" asp-route-trener="@item.TrenerID" asp-controller="Grupa" asp-action="PretraziTrener">Grupe</a>
+            </button>
+            <button style="margin-top: 5px;">
+                <a class="nav-link text-dark" asp-area="" asp-route-id="@item.TrenerID" asp-controller="Trener" asp-action="Promeni">Promeni</a>
+            </button>
+            <button style="margin-top: 5px;">
+                <a class="nav-link text-dark" asp-area="" asp-route-id="@item.TrenerID" asp-controller="Trener" asp-action="Obrisi">Obriši</a>
+            </button>
+
+        </div>
+
+    </div>
+
+
+}
+
+

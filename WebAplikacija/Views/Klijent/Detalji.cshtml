@@ -1,0 +1,42 @@
+﻿@model KlijentViewModel
+
+
+    <div class="div1">
+        <label>Ime:</label>
+        <br />
+        <label>Prezime:</label>
+        <br />
+        <label>Pol:</label>
+        <br />
+        <label>Kilaža:</label>
+        <br />
+        <label>Visina:</label>
+        <br />
+        <label>Grupa:</label>
+    </div>
+    <div class="div2">
+        <input type="number" asp-for="KlijentID" hidden />
+        <br />
+        <input type="text" asp-for="Ime" readonly />
+        <br />
+        <input type="text" asp-for="Prezime" readonly />
+        <br />
+        <input type="text" asp-for="Pol" readonly />
+        <br />
+        <input type="number" asp-for="Kilaza" readonly />
+        <br />
+        <input type="number" asp-for="Visina" readonly />
+        <br />
+        <input type="text" asp-for="Grupa" readonly />
+        <br />
+    </div>
+
+    <br />
+    <br />
+
+<button style=" margin-left: 43px;"><a class=" nav-link text-dark" asp-area="" asp-route-id="@Model.KlijentID" asp-controller="Klijent" asp-action="Promeni">Promeni</a></button>
+<button style=" width: 100px;"><a class="nav-link text-dark" asp-area="" asp-route-id="@Model.KlijentID" asp-controller="Klijent" asp-action="Obrisi">Obriši</a></button>
+
+
+
+

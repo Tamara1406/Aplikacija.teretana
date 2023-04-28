@@ -1,0 +1,33 @@
+﻿@model PretraziTreneraViewModel
+
+<div class="div1" >
+    <label>Ime:</label>
+    <br />
+    <label>Prezime:</label>
+    <br />
+    <label>Obrazovanje:</label>
+    <br />
+    <label>Opis:</label>
+    <br />
+    <br />
+    <br />
+    <label>Grupe:</label>
+    <br />
+</div>
+<div class="div2" >
+    <input type="number" asp-for="TrenerID" hidden />
+    <br />
+    <input type="text" asp-for="Ime" readonly />
+    <br />
+    <input type="text" asp-for="Prezime" readonly />
+    <br />
+    <input type="text" asp-for="Obrazovanje" readonly />
+    <br />
+    <textarea name="opis" rows="3" cols="30" style=" margin-top:20px; ">
+@Model.Opis
+    </textarea>
+    <br />
+    <button style=" margin-bottom: 35px;">
+        <a class="nav-link text-dark" asp-area="" asp-route-trener="@Model.TrenerID" asp-controller="Grupa" asp-action="PretraziTrener">Grupe</a>
+    </button>
+</div>

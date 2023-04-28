@@ -1,0 +1,50 @@
+﻿@model PromeniKlijentaViewModel
+<div asp-validation-summary="All"></div>
+
+<form asp-action="Promeni" asp-controller="Klijent" method="post">
+
+    <div class="div1">
+        <label>Ime:</label>
+        <br />
+
+        <label>Prezime:</label>
+        <br />
+
+        <label>Pol:</label>
+        <br />
+
+        <label>Kilaža:</label>
+        <br />
+
+        <label>Visina:</label>
+        <br />
+
+        <label>Odaberi grupu:</label>
+    </div>
+    <div  class="div2">
+        <input type="number" asp-for="KlijentID" hidden />
+        <br />
+        <input type="text" asp-for="Ime">
+        <br />
+        <input type="text" asp-for="Prezime" />
+        <br />
+        <select asp-items="Model.Polovi" asp-for="PolID">
+        </select>
+        <br />
+        <input type="number" asp-for="Kilaza" />
+        <br />
+        <input type="number" asp-for="Visina" />
+        <br />
+        <select asp-items="Model.Grupe" asp-for="GrupaID">
+        </select>
+        <br />
+    </div>
+    
+    <br />
+
+    <input type="submit" value="Sacuvaj" />
+
+
+</form>
+
+

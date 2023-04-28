@@ -1,0 +1,40 @@
+﻿@model PromeniTreneraViewModel
+<div asp-validation-summary="All"></div>
+
+<form asp-action="Promeni" asp-controller="Trener" method="post">
+
+    <div class="div1">
+        <label>Ime:</label>
+        <br />
+        <label>Prezime:</label>
+        <br />
+        <label>Obrazovanje:</label>
+        <br />
+        <label>Opis:</label>
+        <br />
+        <label>Link slike:</label>
+    </div>
+    <div class="div2">
+        <input type="number" asp-for="TrenerID" hidden/>
+        <br />
+        <input type="text" asp-for="Ime" />
+        <span asp-validation-for="Ime"></span>
+        <br />
+        <input type="text" asp-for="Prezime" />
+        <span asp-validation-for="Prezime"></span>
+        <br />
+        <select asp-items="Model.Obrazovanja" asp-for="ObrazovanjeID">
+        </select>
+        <br />
+        <input type="text" asp-for="Opis" />
+        <br />
+        <input type="Text" asp-for="Slika" />
+        <br />
+    </div>
+
+    <br />
+
+    <input type="submit" value="Sacuvaj" />
+
+
+</form>

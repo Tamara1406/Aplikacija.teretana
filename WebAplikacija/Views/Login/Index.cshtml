@@ -1,0 +1,20 @@
+﻿@model LoginViewModel
+
+
+<form method="post" asp-action="Login" asp-controller="Login">
+
+    <div class="div1">
+        <label>Korisničko ime:</label><br />
+        <label>Lozinka:</label>
+    </div>
+    <div class="div2">
+        <input type="text" asp-for="KorisnickoIme" />
+        <span asp-validation-for="KorisnickoIme"></span>
+        <br />
+        <input type="password" asp-for="Lozinka" />
+        <span asp-validation-for="Lozinka"></span>
+
+    </div>
+    
+    <input type="submit" value="Prijavi se"/>
+</form>
